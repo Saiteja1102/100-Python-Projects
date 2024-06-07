@@ -10,36 +10,41 @@ number_numbers = int(input("How many numbers would you like : "))
 
 
 # Easy One
-password = ""
+# password = ""
+# for i_letters in range(0,number_letters):
+#     rand_letters = random.randint(0,len(letters)-1)
+#     password = password + letters[rand_letters]
+
+# for i_symbols in range(0,number_symbols):
+#     rand_symbols = random.randint(0,len(symbols)-1)
+#     password = password + symbols[rand_symbols]
+
+# for i_numbers in range(0,number_numbers):
+#     rand_numbers = random.randint(0,len(numbers)-1)
+#     password = password + numbers[rand_numbers]
+
+# print(password)
+
+# Hard Level
+password_list = []
 for i_letters in range(0,number_letters):
-    rand_letters = random.randint(0,len(letters))
-    password = password + letters[rand_letters]
+    rand_letters = random.choice(letters)
+    password_list.append(rand_letters)
 
 for i_symbols in range(0,number_symbols):
-    rand_symbols = random.randint(0,len(symbols))
-    password = password + symbols[rand_symbols]
+    rand_symbols = random.choice(symbols)
+    password_list.append(rand_symbols)
 
 for i_numbers in range(0,number_numbers):
-    rand_numbers = random.randint(0,len(numbers))
-    password = password + numbers[rand_numbers]
+    rand_numbers = random.choice(numbers)
+    password_list.append(rand_numbers)
 
-print(password)
+print(password_list)
+random.shuffle(password_list)
+print(password_list)
+# print("".join(password_list))
 
-# # Hard One
-# total_length = number_letters+number_symbols+number_numbers
-# password_list = [total_length]
-# num_list = []
+for i in password_list:
+    print(i,end="")
 
-# for i_letters in range(0,number_letters):
-#     rand_let = random.randint(0,len(letters))
-#     let_random = letters[rand_let]
-#     rand_let_pass = random.randint(0,len(password_list))
-#     num_list.append(rand_let_pass)
-#     count = 0
-#     for i in num_list:
-#         if rand_let_pass == i:
-#             count += 1
-    
-#     if count > 1:
-
-#     password_list[rand_let_pass] = let_random
+print("")
