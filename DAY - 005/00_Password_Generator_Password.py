@@ -9,7 +9,7 @@ number_symbols = int(input("How many symbols would you like : "))
 number_numbers = int(input("How many numbers would you like : "))
 
 
-# Easy One
+# Easy Level
 # password = ""
 # for i_letters in range(0,number_letters):
 #     rand_letters = random.randint(0,len(letters)-1)
@@ -39,11 +39,10 @@ for i_numbers in range(0,number_numbers):
     rand_numbers = random.choice(numbers)
     password_list.append(rand_numbers)
 
-print(password_list)
 random.shuffle(password_list)
-print(password_list)
 # print("".join(password_list))
 
+print("The Password is = ", end="")
 for i in password_list:
     print(i,end="")
 
